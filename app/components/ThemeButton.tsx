@@ -24,7 +24,7 @@ const ThemeButton = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-7 h-7 duration-1000 animate-spin-slow"
         >
           <path
             strokeLinecap="round"
@@ -39,7 +39,7 @@ const ThemeButton = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-6 h-6 duration-1000 animate-bounce"
         >
           <path
             strokeLinecap="round"

@@ -6,12 +6,15 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class',
-  theme: {},
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("daisyui"),
-  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      animation: {
+        "spin-slow": "spin 7s linear infinite",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
     themes: [],
   },

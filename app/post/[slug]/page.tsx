@@ -33,8 +33,8 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className="xl:divide-y xl:divide-gray-700 xl:dark:divide-gray-200">
-      <Breadcrumb title={data.title} />
+    <div className="divide-y divide-gray-700 dark:divide-gray-200">
+      {/* <Breadcrumb title={data.title} /> */}
       <header className="pt-6 xl:pb-6">
         <div className="space-y-1 text-center">
           <div>
@@ -43,7 +43,7 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
             </h1>
           </div>
           <div className="space-y-10">
-            <div className="flex flex-row justify-between items-center mt-6">
+            <div className="flex flex-row justify-between items-center mt-6 mb-3">
               <p className="text-base font-medium leading-6 text-teal-500 badge badge-ghost rounded-md px-4 py-3">
                 {FormatDate(new Date(data._createdAt))}
               </p>
