@@ -8,6 +8,12 @@ const config: Config = {
   ],
   darkMode: 'class',
   theme: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+  ],
+  daisyui: {
+    themes: [],
+  },
 };
 export default config;

@@ -9,3 +9,7 @@ export interface Post {
     read: string
     _createdAt: string
 }
+
+export interface BreadcrumbData {
+    title: string
+}

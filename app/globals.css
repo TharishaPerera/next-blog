@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS to set a specific length and truncate text with "..." */
+.truncate-length {
+  /*max-width: 250px; /* Set the specific length you want */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
