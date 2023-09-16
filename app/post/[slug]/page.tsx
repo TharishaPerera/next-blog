@@ -19,13 +19,15 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
   const PortableTextComponent = {
     types: {
       image: ({ value }: { value: any }) => (
-        <Image
-          src={urlFor(value).url()}
-          alt="Image"
-          className="rounded-lg w-full h-[500px] object-cover"
-          width={800}
-          height={800}
-        />
+        <div>
+          <Image
+            src={urlFor(value).url()}
+            alt="Image"
+            className="object-cover mx-auto block rounded-lg w-full h-[200px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] "
+            width={800}
+            height={800}
+          />
+        </div>
       ),
     },
   };
