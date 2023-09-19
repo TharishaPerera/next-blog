@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import { Post } from "./lib/interface";
 import { client } from "./lib/sanity";
-import Link from "next/link";
 import FormatDate from "./lib/dateFormatter";
 
 export const revalidate = 1;

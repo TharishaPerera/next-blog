@@ -13,19 +13,19 @@ const Footer = () => {
       </aside>
       <ul className="flex ">
         <li>
-          <Link className="" href="#"><AiOutlineLinkedin className="w-7 h-7 rounded-lg hover:-translate-y-1" /></Link>
+          <Link className="" href="#"><AiOutlineLinkedin className="w-6 h-6 rounded-lg hover:-translate-y-1 duration-300" /></Link>
         </li>
         <li>
-          <Link className="" href="#"><BsGithub className="w-6 h-6 rounded-md hover:-translate-y-1 mx-2" /></Link>
+          <Link className="" href="#"><BsGithub className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></Link>
         </li>
         <li>
-          <Link className="" href="#"><FaUserAlt className="w-6 h-6 rounded-md hover:-translate-y-1 mx-2" /></Link>
+          <Link className="" href="#"><FaUserAlt className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></Link>
         </li>
         <li>
-          <Link className="" href="#"><BsFacebook className="w-6 h-6 rounded-md hover:-translate-y-1 mx-2" /></Link>
+          <Link className="" href="#"><BsFacebook className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></Link>
         </li>
         <li>
-          <Link className="" href="#"><BsInstagram className="w-6 h-6 rounded-md hover:-translate-y-1" /></Link>
+          <Link className="" href="#"><BsInstagram className="w-5 h-5 rounded-md hover:-translate-y-1 duration-300" /></Link>
         </li>
       </ul>
     </footer>

@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import React from "react";
-import { BreadcrumbData } from "../lib/interface";
 import { usePathname } from "next/navigation";
+
+import { BreadcrumbData } from "../lib/interface";
 
 const Breadcrumb: React.FC<BreadcrumbData> = ({ title }) => {
   const pathname = usePathname();

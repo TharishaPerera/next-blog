@@ -1,10 +1,11 @@
+import Image from "next/image";
+import { PortableText } from "@portabletext/react";
+
 import Breadcrumb from "@/app/components/Breadcrumb";
 import FormatDate from "@/app/lib/dateFormatter";
 import { Post } from "@/app/lib/interface";
 import { client } from "@/app/lib/sanity";
 import { urlFor } from "@/app/lib/sanityImageUrl";
-import { PortableText } from "@portabletext/react";
-import Image from "next/image";
 
 export const revalidate = 1;
 
