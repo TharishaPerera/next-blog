@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Post } from "./lib/interface";
 import { client } from "./lib/sanity";
 import FormatDate from "./lib/dateFormatter";
+import PaginationControls from "./components/Pagination";
 
 export const revalidate = 1;
 
@@ -12,19 +13,28 @@ async function getData() {
   return data;
 }
 
-const HomePage = async () => {
+const HomePage = async ({ searchParams, } : { searchParams: { [key: string]: string | string[] | undefined } }) => {
+  const page = searchParams['page'] ?? '1'
+  const per_page = searchParams['per_page'] ?? '7'
+
+  const start = (Number(page) - 1) * Number(per_page)
+  const end = start + Number(per_page)
+
   const data = (await getData()) as Post[];
+
+  // slice data for pagination
+  const entries = data.slice(start, end)
 
   return (
     <div className="divide-y divide-gray-700 dark:divide-gray-200">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-3xl font-bold leading-9 tracking-wide text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          All Posts
+        <h1 className="text-3xl font-semibold leading-9 tracking-widest text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          LATEST
         </h1>
       </div>
 
       <ul>
-        {data.map((post) => (
+        {entries.map((post) => (
           <li key={post._id} className="py-4">
             <Link href={`/post/${post.slug.current}`} prefetch>
               <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 p-5 rounded-lg bg-neutral-50 dark:bg-gray-700 dark:shadow-gray-600 shadow-lg">
@@ -52,6 +62,7 @@ const HomePage = async () => {
           </li>
         ))}
       </ul>
+      <PaginationControls hasNextPage={end < data.length} hasPrevPage={start > 0} />
     </div>
   );
 };
