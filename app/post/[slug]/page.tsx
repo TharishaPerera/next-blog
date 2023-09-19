@@ -45,7 +45,7 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
           </div>
           <div className="space-y-10">
             <div className="flex flex-row justify-between items-center mt-6 mb-3">
-              <p className="text-base font-medium leading-6 text-teal-500 badge badge-ghost rounded-md px-4 py-3">
+              <p className="text-sm font-medium leading-6 text-teal-500 badge badge-ghost rounded-md px-4 py-3">
                 {FormatDate(new Date(data._createdAt))}
               </p>
               <p className="text-sm font-medium leading-6 text-teal-500 badge badge-ghost rounded-md px-4 py-3">
