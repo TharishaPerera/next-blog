@@ -26,8 +26,11 @@ const Footer = () => {
         <li>
           <Link className="" href={socialLinks.github} legacyBehavior><a target="_blank"><BsGithub className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></a></Link>
         </li>
-        <li>
+        {/* <li>
           <Link className="" href={socialLinks.portfolio} legacyBehavior><a target="_blank"><FaUserAlt className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></a></Link>
+        </li> */}
+        <li>
+          <Link className="" href='/admin'><FaUserAlt className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></Link>
         </li>
         <li>
           <Link className="" href={socialLinks.facebook} legacyBehavior><a target="_blank"><BsFacebook className="w-5 h-5 rounded-md hover:-translate-y-1 mx-2 duration-300" /></a></Link>
