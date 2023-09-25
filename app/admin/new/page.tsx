@@ -74,9 +74,9 @@ const NewPost = () => {
           />
           <button
             type="submit"
-            className="bg-black text-white text-sm font-medium tracking-widest hover:bg-gray-700 rounded-lg px-7 py-2 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
+            className="bg-black text-white text-md font-medium tracking-widest hover:bg-gray-700 rounded-lg px-7 py-3 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
           >
-            SUBMIT
+            CREATE
           </button>
         </form>
       </div>
