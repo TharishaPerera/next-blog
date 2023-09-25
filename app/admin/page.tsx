@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Table from "../components/Table";
 
 import { Post } from "../lib/interface";
@@ -14,10 +15,16 @@ const Posts = async () => {
 
   return (
     <>
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+      <div className="space-y-2 pt-6 pb-8 md:space-y-5 flex justify-between items-center align-middle">
         <h1 className="text-3xl font-semibold leading-9 tracking-widest text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          All Posts
+          ALL POSTS
         </h1>
+        <Link
+          href="/admin/new"
+          className="bg-black text-white text-sm font-medium hover:bg-gray-700 rounded-lg px-7 py-2 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
+        >
+          New Post
+        </Link>
       </div>
       <div>
         <Table data={data} />

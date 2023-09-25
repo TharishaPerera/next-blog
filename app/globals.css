@@ -15,3 +15,10 @@
 .logo-font {
   font-family: "Bruno Ace SC";
 }
+
+
+
+p:has(code) {
+  background-color: red;
+}
+
