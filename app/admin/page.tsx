@@ -1,6 +1,8 @@
 import Link from "next/link";
-import Table from "../components/Table";
+import { BiCategory } from "react-icons/bi"
+import { HiSquaresPlus } from "react-icons/hi2"
 
+import PostsTable from "../components/PostsTable";
 import { Post } from "../lib/interface";
 import { client } from "../lib/sanity";
 
@@ -19,15 +21,23 @@ const Posts = async () => {
         <h1 className="text-3xl font-semibold leading-9 tracking-widest text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           ALL POSTS
         </h1>
-        <Link
-          href="/admin/new"
-          className="bg-black text-white text-sm font-medium hover:bg-gray-700 rounded-lg px-7 py-2 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
-        >
-          New Post
-        </Link>
+        <div className="flex gap-x-2">
+          <Link
+            href="/admin/new"
+            className="bg-black text-white text-sm font-medium hover:bg-gray-700 rounded-lg px-2 py-2 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
+          >
+            <HiSquaresPlus className="w-5 h-5 " />
+          </Link>
+          <Link
+            href="/admin/categories"
+            className="bg-black text-white text-sm font-medium hover:bg-gray-700 rounded-lg px-2 py-2 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
+          >
+            <BiCategory className="w-5 h-5" />
+          </Link>
+        </div>
       </div>
       <div>
-        <Table data={data} />
+        <PostsTable data={data} />
       </div>
     </>
   );

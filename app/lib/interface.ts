@@ -10,6 +10,11 @@ export interface Post {
     _createdAt: string
 }
 
+export interface Category {
+    id: number,
+    name: string
+}
+
 export interface BreadcrumbData {
     title: string
 }

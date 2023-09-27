@@ -1,16 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { MdArrowBackIosNew } from "react-icons/md";
-import Link from "next/link";
 
 const NewPost = () => {
   const [formData, setFormData] = useState({
-    title: "",
-    slug: "",
-    overview: "",
-    content: "",
-    read: "",
+    name: "",
   });
 
   const handleChange = (event: any) => {
@@ -25,12 +21,12 @@ const NewPost = () => {
 
   return (
     <>
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5 flex justify-between items-center align-middle">
+      <div className="space-y-2 pt-6 pb-8 md:space-y-5 flex justify-between items-center">
         <h1 className="text-3xl font-semibold leading-9 tracking-widest text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          NEW POST
+          NEW CATEGORY
         </h1>
         <Link
-          href="/admin"
+          href="/admin/categories"
           className="bg-black text-white text-sm font-medium hover:bg-gray-700 rounded-lg px-2 py-2 dark:bg-white dark:hover:bg-gray-300 dark:text-black "
         >
           <MdArrowBackIosNew className="w-4 h-4" />
@@ -43,41 +39,10 @@ const NewPost = () => {
         >
           <input
             type="text"
-            name="title"
-            placeholder="TITLE"
+            name="name"
+            placeholder="NAME"
             className="input input-bordered w-full"
-            value={formData.title}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="overview"
-            placeholder="OVERVIEW"
-            className="input input-bordered w-full"
-            value={formData.overview}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="slug"
-            placeholder="SLUG"
-            className="input input-bordered w-full"
-            value={formData.slug}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="read"
-            placeholder="READ"
-            className="input input-bordered w-full"
-            value={formData.read}
-            onChange={handleChange}
-          />
-          <textarea
-            name="content"
-            className="textarea textarea-bordered w-full"
-            placeholder="CONTENT"
-            value={formData.content}
+            value={formData.name}
             onChange={handleChange}
           />
           <button

@@ -5,7 +5,7 @@ import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 const tableHeaders = ["NAME", "ACTION"];
 let sanityLink = "https://blog-tharisha.sanity.studio/desk/post;";
 
-const Table = ({ data }: { data: Post[] }) => {
+const PostsTable = ({ data }: { data: Post[] }) => {
   return (
     <div className="overflow-x-auto">
       <table className="table table-zebra">
@@ -48,4 +48,4 @@ const Table = ({ data }: { data: Post[] }) => {
   );
 };
 
-export default Table;
+export default PostsTable;
